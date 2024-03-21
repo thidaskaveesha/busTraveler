@@ -6,17 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class registerPage extends AppCompatActivity {
+public class loginPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_page);
+        setContentView(R.layout.activity_login_page);
     }
-
-    public void navigateToLogin(View view){
-        // Navigate to login page
-        Intent intent = new Intent(this, loginPage.class);
+    public void navigateToRegister(View view){
+        // Navigate to register page
+        Intent intent = new Intent(this, registerPage.class);
         startActivity(intent);
     }
 }
