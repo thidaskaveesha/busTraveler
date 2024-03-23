@@ -3,11 +3,12 @@
     android:layout_width="match_parent"
     android:fillViewport="true"
     android:layout_height="match_parent"
-
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
@@ -27,47 +28,59 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
             android:src="@drawable/bt_logo"
-            android:scaleType="fitXY"
-            android:layout_centerHorizontal="true" />
+            android:scaleType="fitXY" />
 
-
-        <EditText
-            android:id="@+id/editTextEmail"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/imageViewAfterText"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress" />
+            android:layout_marginEnd="16dp">
 
-        <EditText
-            android:id="@+id/editTextPassword"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEmailLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/editTextEmail"
+            android:layout_below="@id/emailTextInputLayout"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:hint="Password"
-            android:inputType="textPassword" />
+            android:layout_marginEnd="16dp">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPasswordLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/buttonLogin"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@id/editTextPassword"
+            android:layout_below="@id/passwordTextInputLayout"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="16dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:text="Login"
+            android:onClick="loginUser"
             android:textSize="16sp"
             android:textStyle="bold"
             app:cornerRadius="5dp" />
@@ -76,15 +89,16 @@
             android:id="@+id/loginText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_below="@+id/buttonLogin">
+            android:layout_below="@+id/buttonLogin"
+            android:textAlignment="center">
+
             <TextView
-                android:onClick="navigateToRegister"
                 android:id="@+id/logintext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="16dp"
+                android:onClick="navigateToRegister"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/inter_light"
                 android:text="If you don't have an account, please "
@@ -93,25 +107,35 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:onClick="navigateToRegister"
                 android:id="@+id/clickHereText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/logintext"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="1dp"
                 android:text=" register here"
+                android:onClick="navigateToRegister"
                 android:textAlignment="center"
                 android:textColor="#FF0000"
-                android:textSize="15sp"
-                android:layout_centerHorizontal="true" />
+                android:textSize="15sp" />
+
         </RelativeLayout>
 
         <ImageView
             android:id="@+id/footerImageView"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:src="@drawable/road"
             android:layout_alignParentBottom="true"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:src="@drawable/road" />
+
+        <ProgressBar
+            android:id="@+id/progressBarLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
     </RelativeLayout>
+
 </ScrollView>

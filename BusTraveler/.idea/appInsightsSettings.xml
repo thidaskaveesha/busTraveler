@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.mozo.bustraveler" />
+                  <option name="mobileSdkAppId" value="1:336198087954:android:11c8e8de7a84bce4da2fcb" />
+                  <option name="projectId" value="bustraveler-d33ad" />
+                  <option name="projectNumber" value="336198087954" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

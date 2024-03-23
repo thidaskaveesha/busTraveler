@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "336198087954",
+    "project_id": "bustraveler-d33ad",
+    "storage_bucket": "bustraveler-d33ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336198087954:android:11c8e8de7a84bce4da2fcb",
+        "android_client_info": {
+          "package_name": "com.mozo.bustraveler"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAL55oM248geSMEvx1YOMC3dtVRf7BANw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
