@@ -47,6 +47,12 @@ public class loginPage extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void navigateToReset(View view){
+        // Navigate to reset page
+        Intent intent = new Intent(this, resetPassword.class);
+        startActivity(intent);
+    }
+
     // Method to handle login button click
     public void loginUser(View view) {
         EditText emailEditText = findViewById(R.id.editTextEmailLogin);

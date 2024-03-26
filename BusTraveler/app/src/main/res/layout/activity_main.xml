@@ -26,6 +26,7 @@
         android:text="Bus Traveler"
         android:textAlignment="center"
         android:textSize="30dp"
+        android:textColor="@color/black"
         android:fontFamily="@font/inter_extrabold"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
