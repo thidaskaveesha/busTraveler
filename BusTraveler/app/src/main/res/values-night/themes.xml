@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.BusTraveler" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/green</item>
     </style>
     <style name="Theme.BusTraveler.Dark" parent="Base.Theme.BusTraveler" />
 </resources>
