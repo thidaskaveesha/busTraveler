@@ -3,6 +3,8 @@ package com.mozo.bustraveler;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,5 +34,30 @@ public class homePageTraveler extends AppCompatActivity {
     public void goToEmergencyNumber(View view) {
         Intent intent = new Intent(this, emergencyPhoneNumber.class);
         startActivity(intent);
+    }
+
+    public void goToReultsPage(View view) {
+        EditText startEditText = findViewById(R.id.startLocation);
+        EditText endEditText = findViewById(R.id.endLocation);
+
+        String startLocation = startEditText.getText().toString().trim();
+        String endLocation = endEditText.getText().toString().trim();
+
+        // Validate email and password
+        if (startLocation.isEmpty() || endLocation.isEmpty()) {
+            Toast.makeText(this, "current location and destination is required", Toast.LENGTH_SHORT).show();
+            return;
+        }else{
+            /*Intent intent = new Intent(homePageTraveler.this, ResultsActivity.class);
+            intent.putExtra("START_LOCATION", startLocation);
+            intent.putExtra("END_LOCATION", endLocation);
+            startActivity(intent);*/
+        }
+    }
+
+    public void goToPaymentMethod(View view) {
+        Intent intent = new Intent(this, payment_methods.class);
+        startActivity(intent);
+        finish();
     }
 }

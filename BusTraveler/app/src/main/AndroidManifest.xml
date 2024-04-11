@@ -34,9 +34,19 @@
         android:theme="@style/Theme.BusTraveler"
         tools:targetApi="31">
         <activity
-            android:name=".menuPage"
+            android:name=".payment_methods"
             android:exported="false" />
-        <!-- Activities with exported="false" -->
+        <activity
+            android:name=".adding_payment_method"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_key" />
+
+        <activity
+            android:name=".menuPage"
+            android:exported="false" /> <!-- Activities with exported="false" -->
         <activity
             android:name=".payment_activity"
             android:exported="false" />
