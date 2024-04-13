@@ -46,7 +46,7 @@
 
         <activity
             android:name=".menuPage"
-            android:exported="false" /> <!-- Activities with exported="false" -->
+            android:exported="false" />
         <activity
             android:name=".payment_activity"
             android:exported="false" />
@@ -79,7 +79,7 @@
             android:exported="false" />
         <activity
             android:name=".onBoarding"
-            android:exported="false" /> <!-- Main activity with exported="true" -->
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
