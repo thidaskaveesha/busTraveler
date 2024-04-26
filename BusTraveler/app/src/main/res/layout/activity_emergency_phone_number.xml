@@ -25,15 +25,14 @@
             android:id="@+id/headingEmergency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Emergency numbers"
+            android:textColor="@color/black"
             android:textSize="26dp"
             android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginTop="20dp"
             app:flow_horizontalAlign="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.542"
-            app:layout_constraintStart_toEndOf="@+id/backBtn"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
@@ -41,7 +40,7 @@
             android:onClick="callPolice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             app:cardCornerRadius="5dp"
