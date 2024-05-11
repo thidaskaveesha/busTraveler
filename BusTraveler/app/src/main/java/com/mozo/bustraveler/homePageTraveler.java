@@ -10,11 +10,37 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class homePageTraveler extends AppCompatActivity {
 
+    // Declare sensor management light class
+    private SensorManagerLight sensorManagerLight;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page_traveler);
+
+        // Initialize the SensorManagerLight instance
+        sensorManagerLight = SensorManagerLight.getInstance(this);
     }
+    // override on resume if there is light sensor register the listener
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Register the sensor listener when the activity resumes
+        if (sensorManagerLight != null) {
+            sensorManagerLight.registerListener();
+        }
+    }
+
+    // override on pause if there is light sensor unregister the listener
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Unregister the sensor listener when the activity pauses
+        if (sensorManagerLight != null) {
+            sensorManagerLight.unregisterListener();
+        }
+    }
+
 
     public void goToAccountPage(View view) {
         Intent intent = new Intent(this, userAccountPage.class);

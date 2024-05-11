@@ -1,10 +1,9 @@
 package com.mozo.bustraveler;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -17,11 +16,16 @@ public class MainActivity extends AppCompatActivity {
 
     // Declare currentUser as a field of MainActivity
     private FirebaseUser currentUser;
+    // Declare sensor management light class
+    private SensorManagerLight sensorManagerLight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Initialize the SensorManagerLight instance
+        sensorManagerLight = SensorManagerLight.getInstance(this);
 
         // Check if the user is already logged in
         currentUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -31,6 +35,26 @@ public class MainActivity extends AppCompatActivity {
         } else {
             // User is not logged in, show onboarding, registration, and login pages
             showOnboarding();
+        }
+    }
+
+    // override on resume if there is light sensor register the listener
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Register the sensor listener when the activity resumes
+        if (sensorManagerLight != null) {
+            sensorManagerLight.registerListener();
+        }
+    }
+
+    // override on pause if there is light sensor unregister the listener
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Unregister the sensor listener when the activity pauses
+        if (sensorManagerLight != null) {
+            sensorManagerLight.unregisterListener();
         }
     }
 
