@@ -39,7 +39,6 @@
                 android:layout_below="@id/headerLogo"
                 android:layout_centerHorizontal="true"
                 android:text="Add your payment details"
-                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 

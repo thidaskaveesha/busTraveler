@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView to allow vertical scrolling of the content -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:fillViewport="true"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
+    <!-- Position child views relative to each other -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <!-- Footer -->
         <ImageView
             android:id="@+id/footerImageView"
             android:layout_width="match_parent"
@@ -17,8 +18,9 @@
             android:layout_alignParentBottom="true"
             android:scaleType="fitXY"
             android:src="@drawable/road" />
+        <!-- Header -->
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/HeaderRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -27,20 +29,19 @@
             android:fontFamily="@font/inter_extrabold"
             android:text="Register Now!"
             android:textAlignment="center"
-            android:textColor="#000000"
             android:textSize="34sp"
             android:textStyle="bold" />
-
+        <!-- Logo -->
         <ImageView
             android:id="@+id/imageViewAfterText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textView2"
+            android:layout_below="@id/HeaderRegister"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
             android:src="@drawable/bt_logo"
             android:scaleType="fitXY" />
-
+        <!-- Edit Text for Name -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nameTextInputLayout"
             android:layout_width="match_parent"
@@ -58,7 +59,7 @@
                 android:inputType="text" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
+        <!-- Edit Text for Email -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailTextInputLayout"
             android:layout_width="match_parent"
@@ -76,7 +77,7 @@
                 android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
+        <!-- Edit Text for password -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordTextInputLayout"
             android:layout_width="match_parent"
@@ -94,7 +95,7 @@
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
+        <!-- Edit Text for confirm password -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/confirmPasswordTextInputLayout"
             android:layout_width="match_parent"
@@ -112,7 +113,7 @@
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
+        <!-- spinner for choosing role -->
         <Spinner
             android:id="@+id/spinnerRole"
             android:layout_width="match_parent"
@@ -123,7 +124,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:entries="@array/roles" />
-
+        <!-- Button for submit reguistration -->
         <Button
             android:id="@+id/buttonRegister"
             android:layout_width="match_parent"
@@ -138,7 +139,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:cornerRadius="5dp" />
-
+        <!-- Position login section -->
         <RelativeLayout
             android:id="@+id/loginText"
             android:layout_width="match_parent"
@@ -157,7 +158,6 @@
                 android:onClick="navigateToLogin"
                 android:text="If you have an account, please "
                 android:textAlignment="center"
-                android:textColor="#000000"
                 android:textSize="15sp" />
 
             <TextView
@@ -174,7 +174,7 @@
                 android:textSize="15sp" />
         </RelativeLayout>
 
-
+        <!-- Progress circle until result is generated -->
         <ProgressBar
             android:id="@+id/progressBar"
             android:layout_width="wrap_content"

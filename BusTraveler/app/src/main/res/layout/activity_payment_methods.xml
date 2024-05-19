@@ -38,7 +38,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Payment Methods"
-        android:textColor="@color/black"
         android:textSize="24dp"
         android:fontFamily="@font/inter_extrabold"
         android:layout_marginTop="10dp"

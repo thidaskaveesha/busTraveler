@@ -6,27 +6,26 @@
     android:layout_height="match_parent"
     android:backgroundTint="#FFFFFF"
     tools:context=".MainActivity">
-
+    <!-- ImageView for the splash logo -->
     <ImageView
         android:id="@+id/splashLogo"
         android:layout_width="345dp"
         android:layout_height="372dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintBottom_toTopOf="@+id/header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/splashlogo" />
-
+    <!-- Text for the splash logo -->
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bus Traveler"
         android:textAlignment="center"
         android:textSize="30dp"
-        android:textColor="@color/black"
         android:fontFamily="@font/inter_bold"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"

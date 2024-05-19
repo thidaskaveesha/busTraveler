@@ -41,30 +41,30 @@ public class homePageTraveler extends AppCompatActivity {
         }
     }
 
-
+    // Navigate to account page
     public void goToAccountPage(View view) {
         Intent intent = new Intent(this, userAccountPage.class);
         startActivity(intent);
     }
-
+    // Navigate to menu page
     public void goTomenuPage(View view) {
         Intent intent = new Intent(this, menuPage.class);
         startActivity(intent);
     }
-
+    // Navigate to security tips page
     public void gotoSecurityTipsPage(View view) {
         Intent intent = new Intent(this, securityTips.class);
         startActivity(intent);
     }
-
+    // Navigate to Emergency number page
     public void goToEmergencyNumber(View view) {
         Intent intent = new Intent(this, emergencyPhoneNumber.class);
         startActivity(intent);
     }
-
+    // Navigate to results page with input data of locations
     public void goToReultsPage(View view) {
-        EditText startEditText = findViewById(R.id.startLocation);
-        EditText endEditText = findViewById(R.id.endLocation);
+        EditText startEditText = findViewById(R.id.startLocationEditText);
+        EditText endEditText = findViewById(R.id.endLocationEditText);
 
         String startLocation = startEditText.getText().toString().trim();
         String endLocation = endEditText.getText().toString().trim();
@@ -74,13 +74,13 @@ public class homePageTraveler extends AppCompatActivity {
             Toast.makeText(this, "current location and destination is required", Toast.LENGTH_SHORT).show();
             return;
         }else{
-            /*Intent intent = new Intent(homePageTraveler.this, ResultsActivity.class);
+            Intent intent = new Intent(homePageTraveler.this, ResultsActivity.class);
             intent.putExtra("START_LOCATION", startLocation);
             intent.putExtra("END_LOCATION", endLocation);
-            startActivity(intent);*/
+            startActivity(intent);
         }
     }
-
+    // Navigate to Paymentmethod page
     public void goToPaymentMethod(View view) {
         Intent intent = new Intent(this, payment_methods.class);
         startActivity(intent);

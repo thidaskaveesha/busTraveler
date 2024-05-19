@@ -27,7 +27,6 @@
             android:fontFamily="@font/inter_extrabold"
             android:text="Login Now!"
             android:textAlignment="center"
-            android:textColor="#000000"
             android:textSize="34sp"
             android:textStyle="bold" />
 
@@ -40,7 +39,7 @@
             android:layout_marginTop="16dp"
             android:src="@drawable/bt_logo"
             android:scaleType="fitXY" />
-
+        <!-- Edit Text for Email -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailTextInputLayout"
             android:layout_width="match_parent"
@@ -58,7 +57,7 @@
                 android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
+        <!-- Edit Text for Password -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordTextInputLayout"
             android:layout_width="match_parent"
@@ -76,7 +75,7 @@
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
+        <!-- Text for forgot pass -->
         <TextView
             android:id="@+id/resetText"
             android:layout_width="wrap_content"
@@ -107,7 +106,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:cornerRadius="5dp" />
-
+        <!-- Position relatively section to login if available -->
         <RelativeLayout
             android:id="@+id/loginText"
             android:layout_width="match_parent"
@@ -126,7 +125,6 @@
                 android:fontFamily="@font/inter_light"
                 android:text="If you don't have an account, please "
                 android:textAlignment="center"
-                android:textColor="#000000"
                 android:textSize="15sp" />
 
             <TextView

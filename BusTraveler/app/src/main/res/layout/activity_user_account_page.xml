@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView allows the content to be scrollable -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:fillViewport="true"
@@ -9,7 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <!-- ImageView for footer image -->
         <ImageView
             android:id="@+id/footerImageView"
             android:layout_width="match_parent"
@@ -17,21 +18,21 @@
             android:layout_alignParentBottom="true"
             android:scaleType="fitXY"
             android:src="@drawable/road" />
-
+        <!-- ProgressBar for to results -->
         <ProgressBar
             android:id="@+id/progressBarChanges"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:visibility="gone" />
-
+        <!-- ImageView for the top logo -->
         <ImageView
             android:id="@+id/topLogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/bt_logo" />
-
+        <!-- ImageView for user profile image -->
         <ImageView
             android:id="@+id/userImage"
             android:layout_width="150dp"
@@ -39,7 +40,7 @@
             android:layout_below="@id/topLogo"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/userimage" />
-
+        <!-- ImageView for back button -->
         <ImageView
             android:id="@+id/backBtn"
             android:layout_width="45dp"
@@ -49,7 +50,7 @@
             android:onClick="goBack"
             android:layout_marginStart="7dp"
             android:layout_marginTop="7dp" />
-
+        <!-- TextView for the label "Name" -->
         <TextView
             android:id="@+id/labelName"
             android:layout_width="wrap_content"
@@ -57,7 +58,6 @@
             android:layout_below="@id/userImage"
             android:layout_marginStart="16dp"
             android:text="Name"
-            android:textColor="@color/black"
             android:textSize="18dp"
             android:textStyle="bold"/>
 
@@ -73,15 +73,13 @@
             android:background="@android:color/transparent"
             android:enabled="false"
             android:hint="Enter Name"
-            android:textColor="@color/black"
             android:textSize="16dp" />
-
+        <!-- TextView for the label "Bio" -->
         <TextView
             android:id="@+id/labelBio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/editName"
-            android:textColor="@color/black"
             android:layout_marginStart="16dp"
             android:textSize="18dp"
             android:text="Bio"
@@ -99,15 +97,13 @@
             android:background="@android:color/transparent"
             android:enabled="false"
             android:hint="Enter Bio"
-            android:textColor="@color/black"
             android:textSize="16dp" />
-
+        <!-- TextView for the label "Email" -->
         <TextView
             android:id="@+id/labelEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/editBio"
-            android:textColor="@color/black"
             android:layout_marginStart="16dp"
             android:textSize="18dp"
             android:text="Email"
@@ -125,15 +121,13 @@
             android:background="@android:color/transparent"
             android:enabled="false"
             android:hint="Enter Email"
-            android:textColor="@color/black"
             android:textSize="16dp" />
-
+        <!-- TextView for the label "Phone" -->
         <TextView
             android:id="@+id/labelPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/editEmail"
-            android:textColor="@color/black"
             android:layout_marginStart="16dp"
             android:textSize="18dp"
             android:text="Phone"
@@ -153,7 +147,7 @@
             android:hint="Enter Phone"
             android:textColor="@color/black"
             android:textSize="16dp" />
-
+        <!-- Button to submit details -->
         <Button
             android:id="@+id/editButton"
             android:layout_width="match_parent"

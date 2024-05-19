@@ -1,16 +1,10 @@
 package com.mozo.bustraveler;
 
-import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,13 +12,15 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -92,7 +88,7 @@ public class registerPage extends AppCompatActivity {
         // Disable User Interactions
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
                 WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-
+        // get inputs
         String name = editTextName.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
@@ -168,7 +164,7 @@ public class registerPage extends AppCompatActivity {
                         registrationInProgress = false;
                         if (task.isSuccessful()) {
                             // Registration success
-                            // Here you can save additional user details to your database
+                            // Save additional user details to your database
                             saveUserDetailsToDatabase(name, email, role);
                             Toast.makeText(registerPage.this, "User registered successfully", Toast.LENGTH_SHORT).show();
                             // Redirect user to appropriate homepage based on role

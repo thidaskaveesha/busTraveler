@@ -13,9 +13,10 @@ public class DatabaseManager extends SQLiteOpenHelper {
 
     // Table name
     public static final String TABLE_NAME = "SecurityTips";
-
+    // Table columns
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_TIP = "tip";
+    // Constructor
     public DatabaseManager(Context context) {
         super(context, DATABASE_NAME, null, 1);
     }
@@ -31,6 +32,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
         db.execSQL(CREATE_TABLE_QUERY);
     }
 
+    // If table exists
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Drop older table if exists and create a new one

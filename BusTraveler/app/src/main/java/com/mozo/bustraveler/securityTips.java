@@ -85,12 +85,11 @@ public class securityTips extends AppCompatActivity {
                 if (!TextUtils.isEmpty(tip)) {
                     // Add tip to database
                     databaseManager.addTip(tip);
-                    // Update UI (you can add the new tip dynamically to the layout)
-                    // For simplicity, let's just refresh the activity
                     recreate();
                 }
             }
         });
+        // Cancel adding
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -101,6 +100,7 @@ public class securityTips extends AppCompatActivity {
         builder.show();
     }
 
+    // Go back to previeous page
     public void goBack(View view){
         String sourcePage = getIntent().getStringExtra("sourcePage");
         if (sourcePage != null && sourcePage.equals("conductor")) {

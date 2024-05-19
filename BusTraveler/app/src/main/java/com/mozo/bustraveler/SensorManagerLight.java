@@ -9,20 +9,20 @@ import android.hardware.SensorManager;
 import android.util.Log;
 
 public class SensorManagerLight implements SensorEventListener {
-    // declaring classes
+    // Declaring classes
     private static SensorManagerLight instance;
     private SensorManager sensorManager;
     private Sensor lightSensor;
     private Activity activity;
 
-    // creating the constructor
+    // Creating the constructor
     private SensorManagerLight(Activity activity) {
         this.activity = activity;
         sensorManager = (android.hardware.SensorManager) activity.getSystemService(Context.SENSOR_SERVICE);
         lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
     }
 
-    // getter
+    // Getter
     public static SensorManagerLight getInstance(Activity activity) {
         if (instance == null) {
             instance = new SensorManagerLight(activity);
@@ -30,7 +30,7 @@ public class SensorManagerLight implements SensorEventListener {
         return instance;
     }
 
-    // register listener to light sensor
+    // Register listener to light sensor
     public void registerListener() {
         sensorManager.registerListener(this, lightSensor, SensorManager.SENSOR_DELAY_NORMAL);
         Log.d("registerSensor", "Listener registered for light sensor.");
@@ -41,7 +41,7 @@ public class SensorManagerLight implements SensorEventListener {
         sensorManager.unregisterListener(this);
     }
 
-    // change themes on sensor changes
+    // Change themes on sensor changes
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_LIGHT) {

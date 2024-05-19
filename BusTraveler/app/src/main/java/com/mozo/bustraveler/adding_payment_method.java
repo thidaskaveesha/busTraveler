@@ -16,4 +16,7 @@ public class adding_payment_method extends AppCompatActivity {
     public void goBack(View view) {
         finish();
     }
+
+    public void goToReultsPage(View view) {
+    }
 }
