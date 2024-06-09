@@ -55,6 +55,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/road" />
 
+    <ListView
+        android:id="@+id/paymentItems"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="450dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
     <Button
         android:id="@+id/addPaymentMethodBtn"
         android:layout_width="wrap_content"
