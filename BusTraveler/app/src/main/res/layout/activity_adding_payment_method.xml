@@ -147,6 +147,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_centerHorizontal="true"
                 app:cornerRadius="5dp"
+                android:onClick="goToReultsPage"
                 android:text="SUBMIT" />
 
         </RelativeLayout>
