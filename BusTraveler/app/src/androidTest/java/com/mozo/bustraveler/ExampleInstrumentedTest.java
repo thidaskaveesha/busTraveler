@@ -1,5 +1,8 @@
 package com.mozo.bustraveler;
 
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.junit.Assert.assertEquals;
 
 import android.content.Context;
@@ -23,5 +26,13 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("com.mozo.bustraveler", appContext.getPackageName());
         //addPaymentMethod("test", "00000", "552", "226", "215");
+    }
+    @Test
+    public void checkAuthLogin(){
+        onView(withId(R.id.buttonLogin)).perform(click());
+    }
+    @Test
+    public void checkAuthRegister(){
+        onView(withId(R.id.buttonRegister)).perform(click());
     }
 }
